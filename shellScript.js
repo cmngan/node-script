@@ -22,6 +22,7 @@ function replace(file, regex, toWord) {
 
 function script(script) {
   return new Promise( (res, rej) => {
+    script &&
     childProcess.execSync(script,{stdio:[0,1,2]});
     res()
   })
